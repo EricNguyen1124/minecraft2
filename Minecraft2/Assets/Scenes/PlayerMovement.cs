@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
     public float PlayerControl = 500f;
+    public float PlayerSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        rb.AddForce(0,0,PlayerSpeed * Time.deltaTime);
+
         if (Input.GetKey("a"))
         {
             rb.AddForce(-PlayerControl * Time.deltaTime, 0, 0);
