@@ -7,6 +7,10 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("we hit a " + collision.collider);
+        if(collision.gameObject.tag == "Obstacle")
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 
     // Update is called once per frame

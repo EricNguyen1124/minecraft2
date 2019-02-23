@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (rb.position.y < -1){
+            FindObjectOfType<GameManager>().EndGame();
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -20,11 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-PlayerControl * Time.deltaTime, 0, 0);
+            rb.AddForce(-PlayerControl * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("d"))
         {
-            rb.AddForce(PlayerControl * Time.deltaTime, 0, 0);
+            rb.AddForce(PlayerControl * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
