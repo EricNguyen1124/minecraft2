@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
             FindObjectOfType<GameManager>().EndGame();
         }
     }
-    void DoIt()
+    public void DoIt()
     {
         Timemanager.DoSlowMo();
     }
