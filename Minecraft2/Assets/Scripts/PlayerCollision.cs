@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
-{
+{   
     public Rigidbody rb;
     public TimeManager Timemanager;
+
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("we hit a " + collision.collider);
