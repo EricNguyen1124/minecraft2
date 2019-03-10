@@ -39,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
         if (left == true)
         {
             rb.AddForce(-PlayerControl * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            Debug.Log("going left");
         }
         if (right == true)
         {
             rb.AddForce(PlayerControl * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            Debug.Log("going right");
         }
     }
 }
