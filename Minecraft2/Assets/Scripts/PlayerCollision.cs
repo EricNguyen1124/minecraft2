@@ -14,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
         {
             rb.AddForce(0, 800, -800);
             rb.AddTorque(0, 300, 300);
+            FindObjectOfType<DeathPostProcessing>().DeathColor();
             Invoke("DoIt", 0.2f);
             FindObjectOfType<GameManager>().EndGame();
         }
