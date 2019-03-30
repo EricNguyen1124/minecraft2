@@ -11,9 +11,5 @@ public class dissapear : MonoBehaviour
         Score.score += 10;
         Destroy(gameObject);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
