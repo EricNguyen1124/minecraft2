@@ -5,11 +5,15 @@ using UnityEngine;
 public class dissapear : MonoBehaviour
 {
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("ball boy");
-        Score.score += 10;
-        Destroy(gameObject);
+        if(collider.gameObject.name=="Cube")
+        {
+            Debug.Log("ball boy");
+            Score.score += 10;
+            Destroy(gameObject);
+        }
+        
     }
 
 }
